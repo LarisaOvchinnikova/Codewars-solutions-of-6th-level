@@ -80,3 +80,17 @@ function addedChar(s1, s2){
   }
 }
 ```
+* [x][Dashatize it](https://www.codewars.com/kata/dashatize-it/train/javascript)
+```javascript
+function dashatize(num) {
+  let str = num.toString();
+  str = str.replace(/^-/,'');
+  let res = '';
+  for (let i = 0; i < str.length; i++){
+    if (+str[i] % 2 === 1) res = res + '-'+ str[i] + '-';
+    else res = res + str[i];
+  }
+  res = res.replace(/-+/g,'-');
+  return res.replace(/-$/,'').replace(/^-/,'');
+}
+```
