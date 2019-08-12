@@ -70,4 +70,13 @@ function fortune(f0, p, c0, n, i) {
     return (f >= 0);
 }
 ```
-
+* [x][Three added Characters](https://www.codewars.com/kata/three-added-characters/train/javascript)
+```javascript
+function addedChar(s1, s2){
+  let a1 = s1.split('').sort();
+  let a2 = s2.split('').sort();
+  for(let i = 0; i < a2.length; i++){
+    if(a2[i] !== a1[i]) return a2[i];
+  }
+}
+```
