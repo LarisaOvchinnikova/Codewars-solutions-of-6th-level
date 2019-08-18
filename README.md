@@ -80,7 +80,7 @@ function addedChar(s1, s2){
   }
 }
 ```
-* [x][Dashatize it](https://www.codewars.com/kata/dashatize-it/train/javascript)
+* [x] [Dashatize it](https://www.codewars.com/kata/dashatize-it/train/javascript)
 ```javascript
 function dashatize(num) {
   let str = num.toString();
@@ -92,5 +92,23 @@ function dashatize(num) {
   }
   res = res.replace(/-+/g,'-');
   return res.replace(/-$/,'').replace(/^-/,'');
+}
+```
+* [x] [Consecutive strings](https://www.codewars.com/kata/consecutive-strings/train/javascript)
+> You are given an array strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+```javascript
+function longestConsec(arr, k) {
+  let max = 0;
+  let sub, t;
+  let z = '';
+  for (let i = 0;  i <= arr.length-k; i++){
+    sub = '';
+    for (let j = i; j < i+k; j++){
+      sub= sub + arr[j];
+      t = sub.length;
+    }
+   if (t > max) { max = t; z = sub;}
+  }
+  return z;
 }
 ```
