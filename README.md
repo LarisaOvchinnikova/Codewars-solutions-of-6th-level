@@ -112,3 +112,12 @@ function longestConsec(arr, k) {
   return z;
 }
 ```
+* [x] [Replacement](https://www.codewars.com/kata/replacement/train/javascript)
+```javascript
+function replacement(a){
+  a = a.sort((a,b)=>a-b);
+  if (a[a.length -1 ] !== 1) a[a.length - 1 ] = 1;
+  else a[a.length -1 ] ++;
+  return a.sort((a,b)=>a-b);
+}
+```
