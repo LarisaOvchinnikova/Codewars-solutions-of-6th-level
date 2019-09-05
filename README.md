@@ -121,3 +121,24 @@ function replacement(a){
   return a.sort((a,b)=>a-b);
 }
 ```
+* [x] [Find Numbers with Same Amount of Divisors](https://www.codewars.com/kata/55f1614853ddee8bd4000014)
+```javascript
+function countDiv(n){
+  let k = 2; if (n<=2) return k;
+  for (let i=2; i <= n/2; i++){
+    if (n % i === 0) k++;
+  }
+  return k;
+}
+
+function countPairsInt(diff, nMax) {
+  let n = 0; let j;
+ for (let i = 2; i < nMax - diff; i++){
+   j = i + diff;
+   if (countDiv(i) === countDiv(j)) {
+       n++;
+   }
+ }
+  return n;
+}
+```
