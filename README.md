@@ -70,7 +70,7 @@ function fortune(f0, p, c0, n, i) {
     return (f >= 0);
 }
 ```
-* [x][Three added Characters](https://www.codewars.com/kata/three-added-characters/train/javascript)
+* [x] [Three added Characters](https://www.codewars.com/kata/three-added-characters/train/javascript)
 ```javascript
 function addedChar(s1, s2){
   let a1 = s1.split('').sort();
