@@ -142,3 +142,23 @@ function countPairsInt(diff, nMax) {
   return n;
 }
 ```
+* [x] [Highest Rank Number in an Array](https://www.codewars.com/kata/5420fc9bb5b2c7fd57000004)
+
+```javascript
+function highestRank(arr){
+ let obj = {};
+ for (let i = 0; i< arr.length; i++){
+   if (obj[arr[i]]) obj[arr[i]]++;
+   else obj[arr[i]] = 1;
+ } 
+ let max = 0;
+ let ar = [];
+ for (let i in obj){
+   if (obj[i] > max) {max = obj[i];}
+ }
+ for (let i in obj){
+   if ( obj[i] === max) ar.push(+i);
+ }
+ return Math.max(...ar)
+}
+```
