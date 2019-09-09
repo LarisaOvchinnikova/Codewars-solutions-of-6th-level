@@ -162,3 +162,16 @@ function highestRank(arr){
  return Math.max(...ar)
 }
 ```
+* [x] [Duplicate Encoder](https://www.codewars.com/kata/54b42f9314d9229fd6000d9c);
+```javascript
+function duplicateEncode(word){
+ word = word.toLowerCase();
+ let res = '';
+  for (let i = 0; i<word.length; i++){
+    if (word.indexOf(word[i]) === word.lastIndexOf(word[i]))
+      res +='(';
+    else res +=')';
+  }
+  return res;
+}
+```
