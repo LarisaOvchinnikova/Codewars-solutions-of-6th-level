@@ -175,7 +175,7 @@ function duplicateEncode(word){
   return res;
 }
 ```
-* [x] [Playing on a chessboard] (https://www.codewars.com/kata/playing-on-a-chessboard/train/javascript)
+* [x] [Playing on a chessboard](https://www.codewars.com/kata/playing-on-a-chessboard/train/javascript)
 ```javascript
 function game(n){
   let res =[];
