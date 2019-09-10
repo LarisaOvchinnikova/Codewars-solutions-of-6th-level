@@ -175,3 +175,16 @@ function duplicateEncode(word){
   return res;
 }
 ```
+* [x] [Playing on a chessboard] (https://www.codewars.com/kata/playing-on-a-chessboard/train/javascript)
+```javascript
+function game(n){
+  let res =[];
+  let s = 0;
+  for (let i = 1; i<=n; i++){
+    s = s + (i-1)+0.5;
+   }
+  if (Math.trunc(s) === s) res.push(s);
+  else {s *=2; res.push(s,2);}
+  return res;
+}
+```
