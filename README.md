@@ -188,3 +188,18 @@ function game(n){
   return res;
 }
 ```
+* [x][PI approximation](https://www.codewars.com/kata/550527b108b86f700000073f)
+```javascript
+function iterPi(epsilon) {
+  let pi = 0; let a = 1; let sign = 1;
+  let k =0;
+  let q = Math.PI;
+  while (Math.abs(q - pi * 4) > epsilon) {
+   pi = pi + sign * 1/a;
+   a+=2;
+   sign = sign* (-1);
+   k++;
+  }
+  return [k, +(pi*4).toFixed(10)];
+}
+```
