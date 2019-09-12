@@ -203,3 +203,30 @@ function iterPi(epsilon) {
   return [k, +(pi*4).toFixed(10)];
 }
 ```
+* [x] [Complete the table pattern](https://www.codewars.com/kata/5827e2efc983ca6f230000e0)
+```javascript
+function emp(r){
+ let s = '+';
+ for (let i = 0; i < r; i++){
+   s = s + '---+';
+ }
+ return s+'\n';
+}
+function pattern(rows,columns,str){
+  let s = ''; let r = '|'; let z = 0;
+  let leng = str.length;
+  str = str + ' '.repeat(rows*columns-leng);
+  s = s + emp(columns);
+  for (i = 0; i < rows; i++){
+   for (j = 0; j < columns; j++){
+     r = r + ' ' + str[z] + ' ' + '|';
+     z++;
+   }
+   r = r +'\n';
+   s = s + r + emp(columns);
+   r='|';
+  }
+  s = s.slice(0,s.length-1);
+  return s;
+}
+
