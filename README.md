@@ -188,7 +188,7 @@ function game(n){
   return res;
 }
 ```
-* [x][PI approximation](https://www.codewars.com/kata/550527b108b86f700000073f)
+* [x] [PI approximation](https://www.codewars.com/kata/550527b108b86f700000073f)
 ```javascript
 function iterPi(epsilon) {
   let pi = 0; let a = 1; let sign = 1;
