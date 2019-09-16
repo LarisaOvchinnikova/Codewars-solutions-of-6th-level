@@ -229,4 +229,17 @@ function pattern(rows,columns,str){
   s = s.slice(0,s.length-1);
   return s;
 }
-
+```
+* [x] [Numericals of a String](https://www.codewars.com/kata/5b4070144d7d8bbfe7000001)
+```javascript
+function numericals(s){
+  let obj = {};
+  let res = '';
+  for (let i = 0; i < s.length; i++){
+     if (obj[s[i]]) obj[s[i]]++; 
+     else obj[s[i]] = 1;
+    res = res + obj[s[i]];
+  } 
+return res; 
+}
+```
