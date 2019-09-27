@@ -260,3 +260,19 @@ function step(g, m, n) {
   return null;
 }
 ```
+* [x] [Quick (n choose k) calculator] (https://www.codewars.com/kata/55b22ef242ad87345c0000b2)
+```javasccript
+function fact(b,n){
+if (n === 0) return 1;
+ let p = 1;
+ for (let i = b; i<=n; i++){
+   p = p * i;
+ }
+ return p;
+}
+function choose(n,k){
+console.log(n,k);
+if (k > n) return 0;
+  return Math.round(fact(n-k+1,n)/fact(1,k));
+}
+```
