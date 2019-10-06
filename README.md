@@ -261,7 +261,7 @@ function step(g, m, n) {
 }
 ```
 * [x] [Quick (n choose k) calculator] (https://www.codewars.com/kata/55b22ef242ad87345c0000b2)
-```javasccript
+```javascript
 function fact(b,n){
 if (n === 0) return 1;
  let p = 1;
@@ -274,5 +274,17 @@ function choose(n,k){
 console.log(n,k);
 if (k > n) return 0;
   return Math.round(fact(n-k+1,n)/fact(1,k));
+}
+```
+* [x] [Unique In Order] (https://www.codewars.com/kata/unique-in-order/train/javascript)
+```javascript
+var uniqueInOrder=function(str){
+  let res = [];
+  if (str === '') return [];
+  else res.push(str[0]);
+  for (let i = 1; i < str.length; i++){
+    if (str[i] !== str[i-1]) res.push(str[i]);
+  }
+  return res;
 }
 ```
