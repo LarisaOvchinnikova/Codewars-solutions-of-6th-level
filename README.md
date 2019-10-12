@@ -288,3 +288,17 @@ var uniqueInOrder=function(str){
   return res;
 }
 ```
+* [x] [Pyramid Array] (https://www.codewars.com/kata/515f51d438015969f7000013)
+```javascript
+function pyramid(n) {
+  let res = [];  let s = [];
+  for (let i = 1; i <= n; i++){
+    for (let j = 1; j <= i; j++){
+      s.push(1);
+    }
+   res.push(s);
+   s=[];
+  }
+  return res;
+}
+```
