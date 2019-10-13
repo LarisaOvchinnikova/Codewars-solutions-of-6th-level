@@ -302,3 +302,20 @@ function pyramid(n) {
   return res;
 }
 ```
+* [x] [Equal Sides Of An Array] (https://www.codewars.com/kata/equal-sides-of-an-array/train/javascript)
+```javascript
+function findEvenIndex(arr){
+  let s1 = 0; let s2 = 0;
+  for (let i = 0; i < arr.length; i++){
+    s1 = 0; s2 = 0;
+    for (let j = 0; j < i; j++){
+      s1 = s1 + arr[j]
+    }
+    for (let j = i+1; j < arr.length; j++){
+      s2 = s2 + arr[j]
+    }
+    if (s1 === s2) return i;
+  }
+  return -1;
+}
+```
