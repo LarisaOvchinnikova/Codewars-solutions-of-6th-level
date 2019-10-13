@@ -319,3 +319,17 @@ function findEvenIndex(arr){
   return -1;
 }
 ```
+* [x] [Your order, please] (https://www.codewars.com/kata/your-order-please/train/javascript)
+```javascript
+function order(words){
+if (words === '') return '';
+  let str = words.split(' ');
+  let arr = Array(str.length).fill(0);
+  for (let i = 0; i < str.length; i++){
+    let temp = str[i];
+    let digit = +temp.replace(/\D/g,'');
+    arr[digit-1] = temp;
+  }
+  return arr.join(' ');
+}
+```
