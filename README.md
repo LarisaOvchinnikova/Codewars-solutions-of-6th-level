@@ -333,7 +333,7 @@ if (words === '') return '';
   return arr.join(' ');
 }
 ```
-* [x][Delete occurrences of an element if it occurs more than n times](https://www.codewars.com/kata/554ca54ffa7d91b236000023)
+* [x] [Delete occurrences of an element if it occurs more than n times](https://www.codewars.com/kata/554ca54ffa7d91b236000023)
 ```javascript
 function deleteNth(arr,n){
  let obj = {};
@@ -344,14 +344,14 @@ function deleteNth(arr,n){
   return arr.filter(elem => elem !== '*');
 }
 ```
-* [x][Array.diff](https://www.codewars.com/kata/523f5d21c841566fde000009)
+* [x] [Array.diff](https://www.codewars.com/kata/523f5d21c841566fde000009)
 ```javascript
 function array_diff(a, b) {
   return a.filter(elem => !b.includes(elem));
 }
 ```
 
-* [x][Are they the "same"?](https://www.codewars.com/kata/550498447451fbbd7600041c)
+* [x] [Are they the "same"?](https://www.codewars.com/kata/550498447451fbbd7600041c)
 ```javascript
 function comp(arr1, arr2){
   if (!arr1 || !arr2) return false;
@@ -364,7 +364,7 @@ function comp(arr1, arr2){
   return true;
 }
 ```
-* [x][Take a Ten Minute Walk](https://www.codewars.com/kata/54da539698b8a2ad76000228)
+* [x] [Take a Ten Minute Walk](https://www.codewars.com/kata/54da539698b8a2ad76000228)
 ```javascript
 function isValidWalk(walk) {
 if (walk.length !== 10) return false;
@@ -380,3 +380,11 @@ if (walk.length !== 10) return false;
   }
   if (n === s && e === w) return true; else return false;
 }
+```
+* [x] [Dubstep](https://www.codewars.com/kata/551dc350bf4e526099000ae5)
+```javascript
+function songDecoder(song){
+  let res = song.replace(/WUB/g,' ').replace(/ {2,10}/g,' ').replace(/^ +/,'').replace(/ +$/,'');
+  return res;
+}
+```
