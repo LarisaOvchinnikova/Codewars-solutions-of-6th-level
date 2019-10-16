@@ -344,3 +344,21 @@ function deleteNth(arr,n){
   return arr.filter(elem => elem !== '*');
 }
 ```
+* [x][](ttps://www.codewars.com/kata/554ca54ffa7d91b236000023)
+```javascript
+
+```
+
+* [x][Are they the "same"?](https://www.codewars.com/kata/550498447451fbbd7600041c)
+```javascript
+function comp(arr1, arr2){
+  if (!arr1 || !arr2) return false;
+  if (arr1.length !== arr2.length) return false;
+  arr1 = arr1.sort((a,b) => a-b);
+  arr2 = arr2.sort((a,b) => a-b);
+  for (let i = 0; i <arr1.length; i++){
+    if (arr1[i]*arr1[i] !== arr2[i]) return false;
+  }
+  return true;
+}
+```
