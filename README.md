@@ -260,7 +260,7 @@ function step(g, m, n) {
   return null;
 }
 ```
-* [x] [Quick (n choose k) calculator] (https://www.codewars.com/kata/55b22ef242ad87345c0000b2)
+* [x] [Quick (n choose k) calculator](https://www.codewars.com/kata/55b22ef242ad87345c0000b2)
 ```javascript
 function fact(b,n){
 if (n === 0) return 1;
@@ -276,7 +276,7 @@ if (k > n) return 0;
   return Math.round(fact(n-k+1,n)/fact(1,k));
 }
 ```
-* [x] [Unique In Order] (https://www.codewars.com/kata/unique-in-order/train/javascript)
+* [x] [Unique In Order](https://www.codewars.com/kata/unique-in-order/train/javascript)
 ```javascript
 var uniqueInOrder=function(str){
   let res = [];
@@ -288,7 +288,7 @@ var uniqueInOrder=function(str){
   return res;
 }
 ```
-* [x] [Pyramid Array] (https://www.codewars.com/kata/515f51d438015969f7000013)
+* [x] [Pyramid Array](https://www.codewars.com/kata/515f51d438015969f7000013)
 ```javascript
 function pyramid(n) {
   let res = [];  let s = [];
@@ -302,7 +302,7 @@ function pyramid(n) {
   return res;
 }
 ```
-* [x] [Equal Sides Of An Array] (https://www.codewars.com/kata/equal-sides-of-an-array/train/javascript)
+* [x] [Equal Sides Of An Array](https://www.codewars.com/kata/equal-sides-of-an-array/train/javascript)
 ```javascript
 function findEvenIndex(arr){
   let s1 = 0; let s2 = 0;
@@ -319,7 +319,7 @@ function findEvenIndex(arr){
   return -1;
 }
 ```
-* [x] [Your order, please] (https://www.codewars.com/kata/your-order-please/train/javascript)
+* [x] [Your order, please](https://www.codewars.com/kata/your-order-please/train/javascript)
 ```javascript
 function order(words){
 if (words === '') return '';
