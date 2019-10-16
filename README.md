@@ -333,3 +333,14 @@ if (words === '') return '';
   return arr.join(' ');
 }
 ```
+* [x][Delete occurrences of an element if it occurs more than n times](https://www.codewars.com/kata/554ca54ffa7d91b236000023)
+```javascript
+function deleteNth(arr,n){
+ let obj = {};
+ for (let i = 0; i < arr.length; i++){
+   if (obj[arr[i]]) {obj[arr[i]]++; if (obj[arr[i]]>n) arr[i] = '*';}
+   else obj[arr[i]] = 1;
+ }
+  return arr.filter(elem => elem !== '*');
+}
+```
