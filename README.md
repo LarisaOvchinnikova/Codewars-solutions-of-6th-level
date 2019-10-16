@@ -364,3 +364,19 @@ function comp(arr1, arr2){
   return true;
 }
 ```
+* [x][Take a Ten Minute Walk](https://www.codewars.com/kata/54da539698b8a2ad76000228)
+```javascript
+function isValidWalk(walk) {
+if (walk.length !== 10) return false;
+  let n = 0;
+  let s = 0;
+  let e = 0;
+  let w = 0;
+  for (let i = 0; i < walk.length; i++){
+    if (walk[i] === 'n') n++;
+    if (walk[i] === 's') s++;
+    if (walk[i] === 'e') e++;
+    if (walk[i] === 'w') w++;
+  }
+  if (n === s && e === w) return true; else return false;
+}
