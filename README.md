@@ -411,3 +411,18 @@ function tribonacci(s,n){
    return res;
 }
 ```
+* [x] [Highest Scoring Word]()
+```javascript
+function high(x){
+ let arr = x.split(' ');
+ let max = 0; let k; let s;
+ for (let i = 0; i < arr.length; i++){
+   s =0;
+   for (let j = 0; j < arr[i].length; j++){
+     s = s + (arr[i].charCodeAt(j)-96);
+   }
+   if (s > max) {max = s; k = i; }
+ } 
+  return arr[k]? arr[k] : '';
+}
+```
