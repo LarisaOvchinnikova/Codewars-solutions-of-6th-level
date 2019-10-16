@@ -388,3 +388,11 @@ function songDecoder(song){
   return res;
 }
 ```
+
+* [x] [Dubstep - 2](https://www.codewars.com/kata/551dc350bf4e526099000ae5)
+```javascript
+function songDecoder(song){
+  let res = song.replace(/(WUB)+/g,' ').trim();
+  return res;
+}
+```
