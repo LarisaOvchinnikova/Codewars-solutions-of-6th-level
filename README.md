@@ -426,3 +426,39 @@ function high(x){
   return arr[k]? arr[k] : '';
 }
 ```
+* [x] [Simple Encryption #1 - Alternating Split](https://www.codewars.com/kata/57814d79a56c88e3e0000786)
+```javascript
+function encrypt(str, n) {
+  let s = '';
+  if (str === null) return null;
+  for (let j = 0; j < n; j++){
+    for (let i = 1; i < str.length; i+=2){
+     s = s + str[i];
+    }
+   for (let i = 0; i < str.length; i+=2){
+    s = s + str[i];
+   } 
+  str = s; s = '';
+  }
+ return str;
+}
+
+function decrypt(str, n) {
+if (str === null) return null;
+ let l = str.length/2;
+ let s ='';
+ let s1 = str.slice(0, l);
+ let s2 = str.slice(l, str.length); 
+ if (l % 1 !== 0) s1 = s1 +' ';
+ for (let j = 0; j < n; j++){
+   for (let i = 0; i < l; i++){
+      s = s + s2[i] + s1[i];
+   }
+   str = s; s ='';
+   s1 = str.slice(0, l);
+   s2 = str.slice(l, str.length);
+      if (l % 1 !== 0) s1 = s1 +' ';
+ }   
+ return str.trim();
+}
+```
