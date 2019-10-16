@@ -396,3 +396,18 @@ function songDecoder(song){
   return res;
 }
 ```
+* [x] [Tribonacci Sequence](https://www.codewars.com/kata/556deca17c58da83c00002db)
+```javascript
+function tribonacci(s,n){
+  let res = [];
+  if (n === 0) return [];
+  if (n === 1) {res.push(s[0]); return res;}
+  if (n === 2) {res.push(s[0],s[1]); return res;}
+  res.push(s[0],s[1],s[2]);
+  for (let i = 3; i < n; i++){
+    let z = res[i-1] + res[i-2] + res [i-3];
+    res.push(z);
+  }
+   return res;
+}
+```
