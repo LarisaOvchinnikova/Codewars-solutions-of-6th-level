@@ -462,3 +462,39 @@ if (str === null) return null;
  return str.trim();
 }
 ```
+
+* [x] [Moving Zeros To The End](https://www.codewars.com/kata/moving-zeros-to-the-end/train/javascript)
+```
+//1 way:
+var moveZeros = function (arr) {
+ let temp;
+ let fl;
+ do { 
+     fl = 0;
+     for (let i = 0; i < arr.length-1; i++){
+        if (arr[i] === 0) {
+          temp = arr[i];
+          arr[i] = arr[i+1];
+          arr[i+1] = temp;
+          fl = 1;
+        } 
+     }
+ } while (fl !== 0);
+  return arr;
+}
+console.log(moveZeros([1,2,0,1,0,1,0,3,0,1]));
+```
+```
+//2 way
+var moveZeros = function (arr) {
+ let res = [];
+ for (let i = 0; i < arr.length; i++){
+   if (arr[i] !== 0) res.push(arr[i]);
+ } 
+ let n = arr.length - res.length;
+ for (let i = 0; i < n; i++){
+   res.push(0);
+ } 
+ return res;
+} 
+```
