@@ -498,3 +498,22 @@ var moveZeros = function (arr) {
  return res;
 } 
 ```
+* [x] [Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....¡Eureka!!](https://www.codewars.com/kata/take-a-number-and-sum-its-digits-raised-to-the-consecutive-powers-and-dot-dot-dot-eureka/train/javascript)
+```javascript
+function sumOfPow(n){
+  let str = n.toString();
+  let s = 0;
+  for (let i = 0; i < str.length; i++){
+    s = s + Math.pow(+str[i], i+1);
+  }
+  return s;
+}
+
+function sumDigPow(a, b) {
+  let res = [];
+  for (let x = a; x <= b; x++){
+    if (sumOfPow(x) === x) res.push(x);
+  }
+  return res;
+}
+```
