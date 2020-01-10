@@ -527,3 +527,17 @@ function permuteAPalindrome (input) {
  return Object.keys(obj).length <= 1;
 }
 ```
+* [x] [Detect Pangram](https://www.codewars.com/kata/545cedaa9943f7fe7b000048) 
+```javascript
+function isPangram(str){
+  let obj = {};
+  str = str.toLowerCase().replace(/[^a-z]/g,'');
+  for (let i of str){
+    obj[i] = obj[i] ? obj[i]++ : 1;
+  };
+  for (let i in obj){
+    if (obj[i] > 1) return false;
+  };
+  return Object.keys(obj).length === 26;
+}
+```
