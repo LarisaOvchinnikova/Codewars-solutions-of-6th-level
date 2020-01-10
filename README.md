@@ -541,3 +541,9 @@ function isPangram(str){
   return Object.keys(obj).length === 26;
 }
 ```
+* [x] [CamelCase Method](https://www.codewars.com/kata/587731fda577b3d1b0001196)
+```javascript
+String.prototype.camelCase=function(){
+  return this.trim().split(' ').map(el=> el===''? '' : el[0].toUpperCase() + el.slice(1)).join('');
+}
+```
