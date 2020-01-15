@@ -553,3 +553,25 @@ function toCamelCase(str){
   return (str === '')? '' : str.split(/[^a-zA-Z]/g).map((el, i) => (i>0)? el[0].toUpperCase()+el.slice(1): el).join('');
 }
 ```
+* [x] [Converting Measures](https://www.codewars.com/kata/5acfab8d23c81836c90000eb)
+```javascript
+function convertRecipe(recipe){
+ let tbsp = 15, tsp = 5;
+ let num;
+ let arr = recipe.split(' ');
+ for (let i = 1; i < arr.length; i++){
+    if (arr[i-1].includes('/')) {
+      let ch = +(arr[i-1].split('/')[0]); 
+      let zn = +(arr[i-1].split('/')[1]); 
+      num = ch/zn;
+    } else num = +arr[i-1] 
+    if (arr[i] === 'tbsp') {
+      arr[i] = `${arr[i]} (${Math.ceil(num * tbsp)}g)`;
+    }
+    if (arr[i] === 'tsp') {
+      arr[i] = `${arr[i]} (${Math.ceil(num * tsp)}g)`;
+    }  
+ }
+return arr.join(' ');
+}
+```
