@@ -547,3 +547,9 @@ String.prototype.camelCase=function(){
   return this.trim().split(' ').map(el=> el===''? '' : el[0].toUpperCase() + el.slice(1)).join('');
 }
 ```
+* [x] [Convert string to camel case](https://www.codewars.com/kata/517abf86da9663f1d2000003)
+```javascript
+function toCamelCase(str){
+  return (str === '')? '' : str.split(/[^a-zA-Z]/g).map((el, i) => (i>0)? el[0].toUpperCase()+el.slice(1): el).join('');
+}
+```
