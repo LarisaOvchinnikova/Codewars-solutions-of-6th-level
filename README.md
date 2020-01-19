@@ -575,3 +575,19 @@ function convertRecipe(recipe){
 return arr.join(' ');
 }
 ```
+* [x] [Maximum subarray sum](https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c)
+```javascript
+//5 kyu
+var maxSequence = function(arr){
+  if (arr.every(el => el<=0)) return 0;
+  if (arr.length === 0) return 0;
+  let max = -Infinity;
+  for (let i = 0; i <= arr.length - 1; i++){
+    for (let j = i+1; j <= arr.length; j++){
+      let temp = arr.slice(i,j).reduce((a,b) => a+b, 0);
+      if (temp > max) max =  temp;
+    }
+  }
+  return max;
+}
+```
