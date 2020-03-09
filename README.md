@@ -614,3 +614,17 @@ function decode(str) {
   return out;
 }
 ```
+
+* [x] [Simple Fun #258: Is Divisible By 6](https://www.codewars.com/kata/5911385598dcd432ae000004)
+```javascript
+function isDivisibleBy6(s) {
+  let num = 0;
+  let out = []; 
+  for (let i = 0; i < 10; i++) {
+    num = s.valueOf().replace('*', i);
+    if (num.split('').map(el => +el).reduce((a, b) => a+b) % 3 === 0 && num[num.length-1] % 2 === 0) 
+      out.push(num);
+  }
+  return out;
+}
+```
