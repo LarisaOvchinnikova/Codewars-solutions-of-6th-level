@@ -591,3 +591,26 @@ var maxSequence = function(arr){
   return max;
 }
 ```
+
+* [x] [Drunk friend](https://www.codewars.com/kata/558ffec0f0584f24250000a0)
+```javascript
+function decode(str) {
+  if (typeof str !== 'string') return 'Input is not a string';
+  const dict = 'abcdefghijklmnopqrstuvwxyz';
+  const decode = dict.split('').reverse().join('');
+  let out = '';
+  for (let i = 0; i < str.length; i++) {
+    if (!dict.includes(str[i]) && !dict.includes(str[i].toLowerCase())) { out +=str[i]; }
+     else {
+       if (str[i] === str[i].toUpperCase()) {
+         let ind = dict.indexOf(str[i].toLowerCase());
+         out +=decode[ind].toUpperCase();
+       } else {
+           let ind = dict.indexOf(str[i]);
+           out +=decode[ind];
+         }
+     }  
+  }
+  return out;
+}
+```
