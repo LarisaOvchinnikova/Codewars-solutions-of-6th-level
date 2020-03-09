@@ -628,3 +628,17 @@ function isDivisibleBy6(s) {
   return out;
 }
 ```
+* [x] [Valid Parentheses](https://www.codewars.com/kata/52774a314c2333f0a7000688)
+```javascript
+function validParentheses(str){
+  let open = 0;
+  let close = 0;
+  for (let i = 0; i < str.length ; i++){
+   if (str[i] === '(' ) open++;
+   if (str[i] === ')' ) close ++;
+   if (close > open) return false;
+  }
+  return (close === open);
+}
+
+```
