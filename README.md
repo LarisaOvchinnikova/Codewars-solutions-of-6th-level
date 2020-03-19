@@ -642,3 +642,20 @@ function validParentheses(str){
 }
 
 ```
+* [x] [TV channels](https://www.codewars.com/kata/5836dce6966f8d1d43000007)
+```javascript
+function redarr(arr) {
+let obj = {};
+ let res = arr.sort().filter((el,i)=>i === arr.indexOf(el));
+ for (let i = 0; i < res.length; i++){
+   obj[i] = res[i];
+ }
+ return obj;
+}
+//2 case
+function redarr(arr) {
+ let obj = {};
+ arr.sort().filter((el,i)=>i === arr.indexOf(el)).map((el, i) => obj[i] = el);
+ return obj;
+}
+```
