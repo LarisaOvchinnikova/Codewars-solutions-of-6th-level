@@ -659,3 +659,15 @@ function redarr(arr) {
  return obj;
 }
 ```
+* [x][Sentence Calculator](https://www.codewars.com/kata/5970fce80ed776b94000008b)
+```
+ function lettersToNumbers(s) {
+  let num = s.match(/[0-9]/g);
+  let low = s.match(/[a-z]/g);
+  let up = s.match(/[A-Z]/g);
+  let sumN = (!num)? 0: num.reduce((a, el) => a + (+el), 0);
+  let sumL = (!low)? 0: low.reduce((a, el) => a + el.charCodeAt() - 96, 0);
+  let sumUp = (!up)? 0: up.reduce((a, el) => a + (el.charCodeAt() - 64) * 2, 0);
+  return sumN + sumL + sumUp;
+ }
+
