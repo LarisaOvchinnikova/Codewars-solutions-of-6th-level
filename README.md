@@ -670,4 +670,25 @@ function redarr(arr) {
   let sumUp = (!up)? 0: up.reduce((a, el) => a + (el.charCodeAt() - 64) * 2, 0);
   return sumN + sumL + sumUp;
  }
-
+```
+* [x][More Zeros than Ones](https://www.codewars.com/kata/5d41e16d8bad42002208fe1a)
+```javascript
+function moreZeros(s){
+  let res = [];
+  let arr = s.split('').map(el=>el.charCodeAt(0).toString(2).split(''));
+  let count;
+  for (let i = 0; i < arr.length; i++){
+   count = 0;
+   for (let j = 0; j < arr[i].length; j++){
+     if (arr[i][j] === '0') count++;
+   }
+   if (count > arr[i].length - count){
+   arr[i] = (arr[i].join(''));
+   arr[i] = Number.parseInt(arr[i], 2);
+   arr[i] = String.fromCharCode(arr[i]);
+   res.push(arr[i]);
+   }
+  }
+  return res.filter((el, i)=>i ===res.indexOf(el));
+}
+```
