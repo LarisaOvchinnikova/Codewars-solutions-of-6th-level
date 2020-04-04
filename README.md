@@ -692,3 +692,10 @@ function moreZeros(s){
   return res.filter((el, i)=>i ===res.indexOf(el));
 }
 ```
+* [x][Shortest Code : Are they symmetrical?](https://www.codewars.com/kata/5705b59f5eef1f04f1000f84)
+```
+sc=(o)=>{
+if(!Array.isArray(o))o=(o+'').split('');
+return o.join()==o.reverse().join()
+}
+```
