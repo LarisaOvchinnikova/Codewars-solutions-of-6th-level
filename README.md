@@ -699,3 +699,22 @@ if(!Array.isArray(o))o=(o+'').split('');
 return o.join()==o.reverse().join()
 }
 ```
+* [x][Break camelCase](https://www.codewars.com/kata/5208f99aee097e6552000148)
+```
+function solution(str) {
+  let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let res = '';
+  for (let i = 0; i < str.length; i++){
+    if (upper.includes(str[i])) res = res + ' ' + str[i];
+    else res = res + str[i]; 
+  }
+  return res;
+}
+//2 case
+function solution(str) {
+   return str.replace(/([A-Z])/g,' $1');
+}
+//3 case
+function solution(str) {
+    return str.replace(/(?=[A-Z])/g,' ');
+}
