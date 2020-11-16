@@ -1,0 +1,33 @@
+//https://www.codewars.com/kata/582c01ad3fd1cc5736000348
+function makeMatrix(m,n){
+ let digits = String(m).split("").map(el=>+el);
+ let arr = [];
+ for (let i = 0; i < n; i++){
+   let str = []
+   for (let j = 0; j < n; j++){
+     str.push(0)
+   }
+   arr.push(str)
+ }
+  for (let i = 0; i < n; i++){
+    for (let j = 0; j < n; j++){
+     if( i === j || i + j === n-1 ) {
+       arr[i][j] = digits[0]
+     }
+     if (j>i && i+j < n-1) {
+       arr[i][j] = digits[1]
+     }
+     if (j>i && i+j > n-1) {
+       arr[i][j] = digits[4]
+     } 
+      if (j<i && i+j < n-1) {
+       arr[i][j] = digits[3]
+     }  
+      if (j<i && i+j > n-1) {
+       arr[i][j] = digits[2]
+     }  
+    }
+  }
+ arr = arr.map(el => el.join(' '))
+ return arr.join("\n") ;
+}
