@@ -1,0 +1,93 @@
+//https://www.codewars.com/kata/54ce9497975ca65e1a0008c6
+function convertTemp(temp, from_scale, to_scale){
+  switch(from_scale){
+    case "C" :
+         switch(to_scale){
+           case "C":  return Math.round(temp);
+           case "F":  return Math.round(temp * 9/5 + 32);
+           case "K":  return Math.round(temp + 273.15);
+           case "R":  return Math.round((temp + 273.15) * 9/5);
+           case "De": return Math.round((100 - temp) * 3/2);
+           case "N":  return Math.round(temp * 33/100);
+           case "Re": return Math.round(temp * 4/5);
+           case "Ro": return Math.round(temp * 21/40 + 7.5);
+          }
+    case "F": 
+         switch(to_scale){
+           case "C":  return Math.round((temp - 32) * 5/9);
+           case "F":  return Math.round(temp);
+           case "K":  return Math.round((temp + 459.67) * 5/9);
+           case "R":  return Math.round(temp + 459.67);
+           case "De": return Math.round((212 - temp) * 5/6);
+           case "N":  return Math.round((temp - 32) * 11/60);
+           case "Re": return Math.round((temp - 32) * 4/9);
+           case "Ro": return Math.round((temp - 32) * 7/24 + 7.5);
+          }
+    case "K" :
+         switch(to_scale){
+           case "C":  return Math.round(temp - 273.15);
+           case "F":  return Math.round(temp * 9/5 - 459.67);
+           case "K":  return Math.round(temp);
+           case "R":  return Math.round(temp * 9/5);
+           case "De": return Math.round((373.15 - temp) * 3/2);
+           case "N":  return Math.round((temp - 273.15) * 33/100);
+           case "Re": return Math.round((temp - 273.15) * 4/5);
+           case "Ro": return Math.round((temp - 273.15) * 21/40 + 7.5);
+          }
+    case "R" :
+         switch(to_scale){
+           case "C":  return Math.round((temp - 491.67) * 5/9);
+           case "F":  return Math.round(temp - 459.67);
+           case "K":  return Math.round(temp * 5/9);
+           case "R":  return Math.round(temp);
+           case "De": return Math.round((671.67 - temp) * 5/6);
+           case "N":  return Math.round((temp - 491.67) * 11/60);
+           case "Re": return Math.round((temp - 491.67) * 4/9);
+           case "Ro": return Math.round((temp - 491.67) * 7/24 + 7.5);
+          }
+    case "De" :
+         switch(to_scale){
+           case "C":  return Math.round(100 - temp * 2/3);
+           case "F":  return Math.round(212 - temp * 6/5);
+           case "K":  return Math.round(373.15 - temp * 2/3);
+           case "R":  return Math.round(671.67 - temp * 6/5);
+           case "De": return Math.round(temp);
+           case "N":  return Math.round(33 - temp * 11/50);
+           case "Re": return Math.round(80 - temp * 8/15);
+           case "Ro": return Math.round(60 - temp * 7/20);
+          }
+     case "N" :
+         switch(to_scale){
+           case "C":  return Math.round(temp * 100/33);
+           case "F":  return Math.round(temp * 60/11 + 32);
+           case "K":  return Math.round(temp * 100/33 + 273.15);
+           case "R":  return Math.round(temp * 60/11 + 491.67);
+           case "De": return Math.round((33 - temp) * 50/11);
+           case "N":  return Math.round(temp);
+           case "Re": return Math.round(temp * 80/33);
+           case "Ro": return Math.round(temp * 35/22 + 7.5);
+          }
+    case "Re" :
+         switch(to_scale){
+           case "C":  return Math.round(temp * 5/4);
+           case "F":  return Math.round(temp * 9/4 + 32);
+           case "K":  return Math.round(temp * 5/4 + 273.15);
+           case "R":  return Math.round(temp * 9/4 + 491.67);
+           case "De": return Math.round((80 - temp) * 15/8);
+           case "N":  return Math.round(temp * 33/80);
+           case "Re": return Math.round(temp);
+           case "Ro": return Math.round(temp * 21/32 + 7.5);
+          }
+    case "Ro" :
+         switch(to_scale){
+           case "C":  return Math.round((temp - 7.5) * 40/21);
+           case "F":  return Math.round((temp - 7.5) * 24/7 + 32);
+           case "K":  return Math.round((temp - 7.5) * 40/21 + 273.15);
+           case "R":  return Math.round((temp - 7.5) * 24/7 + 491.67);
+           case "De": return Math.round((60 - temp) * 20/7);
+           case "N":  return Math.round((temp - 7.5) * 22/35);
+           case "Re": return Math.round((temp - 7.5) * 32/21);
+           case "Ro": return Math.round(temp);
+          }
+     }
+}
