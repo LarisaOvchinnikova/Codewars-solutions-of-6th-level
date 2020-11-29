@@ -1,0 +1,16 @@
+//https://www.codewars.com/kata/58d12885d9e7e6221c00005c
+
+// return a sorted film array
+// highest rating first, alphabetically within the same ratings
+function compare(a,b){
+  if (a['rating'] === b['rating']) {
+    if (a['film'] > b['film']) return 1;
+    else return -1;
+  } else return b['rating'] - a['rating']
+}
+
+
+function sortCollection(array){
+  return array? array.sort(compare): array;
+}
+
