@@ -1,0 +1,15 @@
+//https://www.codewars.com/kata/529e2e1f16cb0fcccb000a6b/
+
+let splitInteger = function(num, parts) {
+    let n = Math.trunc(num / parts);
+    let r = num % parts;
+    let arrN = [];
+    let arrN1 = [];
+    for (let i = 1; i <= parts - r; i++){
+      arrN.push(n);
+    }
+    for (let i = 1; i <= r; i++){
+      arrN1.push(n+1);
+    }
+    return arrN.length > 0 && arrN1.length > 0? [...arrN,...arrN1]: arrN.length > 0? arrN : arrN1
+}
