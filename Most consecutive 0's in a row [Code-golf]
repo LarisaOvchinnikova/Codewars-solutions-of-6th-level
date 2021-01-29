@@ -1,3 +1,8 @@
 //https://www.codewars.com/kata/5b901127d0093853470001e7
 
 f=n=>(n+'').match(/0+/g).sort().reverse()[0].length
+
+
+// or:
+
+f=n=>(n+'').match(/0+/g).sort().pop().length
