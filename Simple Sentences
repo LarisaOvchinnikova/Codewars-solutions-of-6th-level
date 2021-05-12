@@ -1,0 +1,7 @@
+//https://www.codewars.com/kata/5297bf69649be865e6000922
+
+function makeSentence(parts) {
+  let s = parts.join(" ") + '.'
+  s = s.replace(/ *,/g, ',').replace(/ *\./g, '.').replace(/\.*$/, '.')
+  return s
+}
